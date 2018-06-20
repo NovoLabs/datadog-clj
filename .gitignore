@@ -1,0 +1,20 @@
+/target
+/classes
+/checkouts
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+/.lein-*
+/.nrepl-port
+.hgignore
+.hg/
+
+# profiles
+profiles.clj
+
+# Makefile
+build/*
+
+# Vim
+*.swp
