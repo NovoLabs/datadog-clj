@@ -1,5 +1,5 @@
-(defproject datadog-clj "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
+(defproject com.novolabs/datadog-clj "0.0.1-SNAPSHOT"
+  :description "A Clojure wrapper around the official Datadog Java client."
   :url "https://github.com/novolabs/datadog-clj"
   :license {:name "BSD-3-Clause"
             :url "https://opensource.org/licenses/BSD-3-Clause"}
