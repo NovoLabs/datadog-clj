@@ -46,9 +46,15 @@
 (defn incre
   "Takes `metric`, `tags`, increments that metric."
   [metric tags opts]
-  (.incrementCounter @statsd metric (make-tags tags opts)))
+  (let [all-tags (make-tags tags opts)]
+    (if (:sample-rate opts)
+      (.incrementCounter @statsd metric (:sample-rate opts) all-tags)
+      (.incrementCounter @statsd metric all-tags))))
 
 (defn decre
   "Takes `metric`, `tags`, decrements that metric."
   [metric tags opts]
-  (.decrementCounter @statsd metric (make-tags tags opts)))
+  (let [all-tags (make-tags tags opts)]
+    (if (:sample-rate opts)
+      (.decrementCounter @statsd metric (:sample-rate opts) all-tags)
+      (.decrementCounter @statsd metric all-tags))))
