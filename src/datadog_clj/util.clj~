@@ -1,0 +1,7 @@
+(ns datadog-clj.util)
+
+(defn ->int
+  "Converts a string to an integer"
+  [s]
+  (java.lang.Integer/valueOf (re-find #"\d+" s) 10))
+

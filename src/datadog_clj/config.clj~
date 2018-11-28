@@ -1,0 +1,8 @@
+(ns datadog-clj.config
+  (:require [environ.core :refer [env]]
+            [trptcolin.versioneer.core :as version]))
+
+(def prefix (env :datadog-prefix))
+(def host (env :datadog-host))
+(def )
+
