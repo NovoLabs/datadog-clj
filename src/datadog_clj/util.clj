@@ -6,7 +6,12 @@
 (defn ->int
   "Converts a string to an integer"
   [s]
-  (java.lang.Integer/valueOf (re-find #"\d+" s) 10))
+  (read-string (re-find #"[+|-]?[0-9]*" s)))
+
+(defn ->float
+  "Converts a string to a float"
+  [s]
+  (read-string (re-find #"[+|-]?[0-9]*\.?[0-9]*" s)))
 
 (defn ->bool
   "Converts a string to a boolean"
