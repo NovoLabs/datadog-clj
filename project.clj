@@ -1,4 +1,4 @@
-(defproject novolabs/datadog-clj "0.1.2"
+(defproject novolabs/datadog-clj "0.1.3"
   :description "A Clojure wrapper around the official Datadog Java client."
 
   :url "https://github.com/novolabs/datadog-clj"
@@ -32,6 +32,10 @@
                       ;; added to all metrics. `environment` is the most common,
                       ;; allowing you to partition your metrics by environment
                       :datadog-constant-tags "environment:dev"
+
+                      ;; Changes this to a value between 0.0 and 1.0 to adjust
+                      ;; the sampling rate of DataDog
+                      :datadog-sample-rate "1.0"
                       
                       ;; `true` if you want version `version` tag included as
                       ;; part of the contstant tags
