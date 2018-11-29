@@ -16,5 +16,5 @@
 (defn ->bool
   "Converts a string to a boolean"
   [true?]
-  (and (string? true?)
-       (truthy (lower-case true?))))
+  (boolean (and (string? true?)
+                (truthy (lower-case true?)))))
